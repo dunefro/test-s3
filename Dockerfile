@@ -1,3 +1,5 @@
-FROM amazon/aws-cli
+FROM quay.io/vedant99/ubuntu
 
-RUN aws s3 ls > output.txt
+RUN apt update && apt install telnet -y
+
+CMD /bin/bash
