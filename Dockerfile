@@ -1,5 +1,5 @@
 FROM quay.io/vedant99/ubuntu
 
-RUN apt update && apt install telnet -y
+RUN apt update && apt install python3 -y
 
-CMD /bin/bash
+CMD python3 -m http.server 8080
