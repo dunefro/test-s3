@@ -1,4 +1,4 @@
-FROM quay.io/vedant99/ubuntu
+FROM quay.io/vedant99/ubuntu:v2
 
 RUN apt update && apt install python3 -y
 
