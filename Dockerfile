@@ -4,4 +4,4 @@ RUN apt update && apt install python3 wget -y
 
 RUN sleep 120
 
-CMD python3 -m http.server 8082
+CMD python3 -m http.server 8083
