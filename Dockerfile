@@ -1,3 +1,9 @@
-FROM amazon/aws-cli
+FROM python:3.12
 
-RUN aws s3 ls > output.txt
+WORKDIR /app
+
+COPY src .
+
+RUN --mount=type=secret,id=pip.conf,target=/root/.pip/pip.conf pip install -r requirements.txt
+
+CMD ["python", "main.py"]
