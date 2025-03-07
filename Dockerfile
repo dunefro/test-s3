@@ -1,3 +1,5 @@
-FROM amazon/aws-cli
+FROM 848492427212.dkr.ecr.us-east-1.amazonaws.com/tfy-vedant-nginx:v1
 
-RUN aws s3 ls > output.txt
+RUN apt update && apt install wget -y
+
+CMD sleep 100000
