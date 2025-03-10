@@ -1,6 +1,6 @@
 FROM quay.io/vedant99/ubuntu:v3
 
-RUN apt update && apt install python3 wget -y
+RUN apt update && apt install python3 wget curl -y
 
 RUN sleep 6
 
