@@ -32,7 +32,7 @@ jobs:
       - name: Build image
         uses: docker/build-push-action@v6
         with:
-          push: false
+          push: true
           load: true
           file: Dockerfile
           context: .
