@@ -1,5 +1,5 @@
-FROM 848492427212.dkr.ecr.us-east-1.amazonaws.com/tfy-abhijith-nvidia-nvidia-gradio-agent-28pmx:1
+FROM python:3.12-slim
 
-RUN apt update && apt install wget curl jq postgresql-client telnet -y
+COPY . .
 
-CMD sleep 100000
+CMD [ "python", "main.py" ]
