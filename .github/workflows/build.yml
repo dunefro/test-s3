@@ -1,4 +1,4 @@
-name: Build, Scan and Publish sfy-manifest-service
+name: Build image
 
 on:
   push:
@@ -39,5 +39,3 @@ jobs:
           platforms: linux/amd64 # arm intentionally excluded since we can do with just amd for scan image action
           tags: |
             quay.io/vedant99/test-s3:${{ steps.vars.outputs.sha_short }}
-          cache-from: type=registry,ref=quay.io/vedant99/test-s3-buildcache
-          cache-to: mode=max,image-manifest=true,type=registry,ref=quay.io/vedant99/test-s3-buildcache
