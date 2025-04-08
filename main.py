@@ -11,7 +11,7 @@ print_file=os.getenv('TFY_PRINT_FILE')
 while True:
     if secret_env:
         logging.info(f"Secret ENV value is {secret_env}")
-    if print_file:
+    if print_file and os.path.exists(print_file):
         with open(print_file, 'r') as f:
             logging.info(f.read())
     
