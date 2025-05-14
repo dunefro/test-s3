@@ -12,7 +12,7 @@ logging.info(f"Process {os.getpid()} started...")
 
 while True:
     if secret_env:
-        logging.info(f"Secret ENV value is {secret_env}")
+        logging.info(f"Secret environment variable value is {secret_env}")
     if print_file and os.path.exists(print_file):
         with open(print_file, 'r') as f:
             logging.info(f.read())
